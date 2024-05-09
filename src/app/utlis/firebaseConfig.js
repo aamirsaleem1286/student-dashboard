@@ -3,13 +3,13 @@ import { getAuth } from "firebase/auth"; // Import for authentication (if applic
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDe-PY-iJYVdLhl-ytvHe7RHjhNA0v1PQI",
-    authDomain: "studentdashboard-5d6fd.firebaseapp.com",
-    projectId: "studentdashboard-5d6fd",
-    storageBucket: "studentdashboard-5d6fd.appspot.com",
-    messagingSenderId: "347083253262",
-    appId: "1:347083253262:web:dd58df21933fef06e47e5f",
-    measurementId: "G-TDZHERG7WM"
+    apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+    authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+    projectId:process.env.REACT_APP_FIREBASE_PROJECT_ID,
+    storageBucket:process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_FIREBASE_APP_ID,
+    measurementId: process.env.FIREBASE_MEASUREMENT_ID
 };
 
 export const app = initializeApp(firebaseConfig);
